@@ -1,0 +1,44 @@
+
+
+nasm -f elf32  sample.asm  -l sample.lst
+
+ld  -m  elf_i386 -o sum_of_num sum_of_num.o  io.o 
+
+
+nasm -f elf32  sum_of_num.asm  
+
+ld  -m  elf_i386 -o A2   A2.o   io.o 
+
+
+
+du -b *executable file name*
+------size 
+
+
+
+gdb output
+
+
+l
+b 34  ; break point
+
+
+info registers
+info register eax
+
+
+r	;run
+
+
+x/nfu	&variabe	n:number of unit	u:unit			f:format(x-hexadecimal   d-decimal)
+
+x/2xb &n2			value stored in specific variable
+
+b byte    w word   half word
+
+breakpoint in loop
+
+ZF flag will be on whenever any arithmeic operation result is zero
+
+6F-78 = F9
+
